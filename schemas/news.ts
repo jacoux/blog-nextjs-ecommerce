@@ -1,6 +1,6 @@
 import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 import authorType from './author'
 
@@ -17,8 +17,8 @@ import authorType from './author'
  */
 
 export default defineType({
-  name: 'post',
-  title: 'Activities',
+  name: 'news',
+  title: 'News',
   icon: BookIcon,
   type: 'document',
   fields: [
@@ -33,21 +33,7 @@ export default defineType({
       title: 'Category',
       type: 'string',
     }),
-    defineField({
-      name: 'tags',
-      type: 'array',
-      title: 'Tags for item',
-      of: [
-        defineArrayMember({
-          type: 'object',
-          name: 'tag',
-          fields: [
-            { type: 'string', name: 'label' },
-            { type: 'string', name: 'value' },
-          ],
-        }),
-      ],
-    }),
+
     defineField({
       name: 'slug',
       title: 'Slug',

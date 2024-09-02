@@ -52,6 +52,10 @@ export async function getAllPosts(client: SanityClient): Promise<Post[]> {
   return (await client.fetch(indexQuery)) || []
 }
 
+export async function getAllExplore(client : SanityClient): Promise<Post[]> {
+  return (await client.fetch(indexQuery)) || []
+}
+
 export async function getAllPostsSlugs(): Promise<Pick<Post, 'slug'>[]> {
   const client = getClient()
   const slugs = (await client.fetch<string[]>(postSlugsQuery)) || []

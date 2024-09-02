@@ -1,0 +1,13 @@
+.bg-big {
+    padding: 200px 200px;
+    min-height: 100%;
+    background: linear-gradient(0deg, rgb(10 10 10 / 100%), rgba(255, 0, 150, 0.3)),
+        url(https://www.toerismevlaamsbrabant.be/Images/tumuliroute-header_tcm251-140186.png);
+    background-size: cover;
+}
+
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600 !important;
+    font-style: normal;
+}

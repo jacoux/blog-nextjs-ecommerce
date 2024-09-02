@@ -6,6 +6,30 @@ const postFields = groq`
   date,
   _updatedAt,
   excerpt,
+  category,
+  tags,
+  coverImage,
+  "slug": slug.current,
+  "author": author->{name, picture},
+`
+const exploreFields = groq`
+  _id,
+  title,
+  date,
+  _updatedAt,
+  excerpt,
+  category,
+  tags,
+  coverImage,
+  "slug": slug.current,
+  "author": author->{name, picture},
+`
+const newsFields = groq`
+  _id,
+  title,
+  date,
+  _updatedAt,
+  excerpt,
   coverImage,
   "slug": slug.current,
   "author": author->{name, picture},
@@ -29,6 +53,28 @@ export const postAndMoreStoriesQuery = groq`
     ${postFields}
   }
 }`
+export const exploreAndMoreStoriesQuery = groq`
+{
+  "explore": *[_type == "explore" && slug.current == $slug] | order(_updatedAt desc) [0] {
+    content,
+    ${exploreFields}
+  },
+  "moreExplore": *[_type == "explore" && slug.current != $slug] | order(date desc, _updatedAt desc) [0...2] {
+    content,
+    ${exploreFields}
+  }
+}`
+export const newsAndMoreStoriesQuery = groq`
+{
+  "news": *[_type == "news" && slug.current == $slug] | order(_updatedAt desc) [0] {
+    content,
+    ${newsFields}
+  },
+  "newsMorePosts": *[_type == "news" && slug.current != $slug] | order(date desc, _updatedAt desc) [0...2] {
+    content,
+    ${newsFields}
+  }
+}`
 
 export const postSlugsQuery = groq`
 *[_type == "post" && defined(slug.current)][].slug.current
@@ -50,6 +96,8 @@ export interface Post {
   title?: string
   coverImage?: any
   date?: string
+  category?: string
+  tags: string[]
   _updatedAt?: string
   excerpt?: string
   author?: Author

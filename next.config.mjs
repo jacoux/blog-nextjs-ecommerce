@@ -6,6 +6,18 @@ const config = {
       { hostname: 'source.unsplash.com' },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/verken-landen',
+        destination: '/posts',
+      },
+      {
+        source: '/activiteiten',
+        destination: '/activities',
+      }
+    ]
+  },
   typescript: {
     // Set this to false if you want production builds to abort if there's type errors
     ignoreBuildErrors: process.env.VERCEL_ENV === 'production',

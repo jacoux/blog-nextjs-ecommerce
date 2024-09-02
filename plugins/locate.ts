@@ -35,6 +35,10 @@ export const locate: DocumentLocationResolver = (params, context) => {
               title: 'Home',
               href: `/`,
             },
+            {
+              title: doc.title || 'Untitled',
+              href: `/posts`,
+            },
           ],
         }
       }),

@@ -37,19 +37,24 @@ export default function PostPage(props: PostPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <BlogHeader title={title} level={2} />
+          {/* <BlogHeader title={title} level={2} /> */}
           {preview && !post ? (
             <PostTitle>Loading…</PostTitle>
           ) : (
             <>
               <article>
-                <PostHeader
+                {/* <PostHeader
                   title={post.title}
                   coverImage={post.coverImage}
                   date={post.date}
                   author={post.author}
-                />
-                <PostBody content={post.content} />
+                />  */}
+                  <PostBody
+                     title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                    content={post.content} />
               </article>
               <SectionSeparator />
               {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
