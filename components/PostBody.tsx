@@ -23,9 +23,9 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   },
 }
 export default function PostBody(
-  props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug' | 'content'>,
+  props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug' | 'content' | 'whom' | 'datehour' | 'location'>,
 ) {
-  const { title, coverImage, date, author, slug, content } = props
+  const { title, coverImage, date, author, slug, content, whom, datehour, location } = props
   return (
 <section>
       {/* Container */}
@@ -51,10 +51,7 @@ export default function PostBody(
                 Wanneer
               </h2>
               <p className="flex-1">
-                Our mission is clear: to empower brands through the unparalleled
-                power of storytelling. We believe that every brand has a unique
-                narrative waiting to be told, and our mission is to bring those
-                stories to life with authenticity, creativity, and impact.
+                {datehour}
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
@@ -62,11 +59,7 @@ export default function PostBody(
                 Voor wie
               </h2>
               <p className="flex-1">
-                What sets us apart is our holistic approach to video production.
-                From concept to creation and promotion, we guide our clients
-                through every step, ensuring a seamless and effective process.
-                We combine creativity with strategy, producing content that not
-                only looks stunning but also achieves tangible results.
+                {whom}
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
@@ -83,7 +76,7 @@ export default function PostBody(
                 Waar
               </h2>
               <p className="flex-1">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.6986153562457!2d5.039186017610635!3d50.77098674398754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c121b67ee8b02b%3A0x3983d4d3a40ff7f0!2sJacoux%20IT!5e0!3m2!1snl!2sbe!4v1725047295174!5m2!1snl!2sbe" width="600" height="450"  loading="lazy" ></iframe>
+                {location}
               </p>
             </div>
           </div>

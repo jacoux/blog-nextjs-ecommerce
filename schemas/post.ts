@@ -34,6 +34,22 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'whom',
+      title: 'Voor wie',
+      type: 'text',
+    }),
+    defineField({
+      name: 'location',
+      title: 'locatie',
+      type: 'text',
+    }),
+    defineField({
+      name: 'datehour',
+      title: 'uur en datum',
+      type: 'string',
+    }),
+
+    defineField({
       name: 'tags',
       type: 'array',
       title: 'Tags for item',
