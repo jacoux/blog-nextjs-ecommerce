@@ -6,6 +6,9 @@ import {
   useCdn,
 } from 'lib/sanity.api'
 import {
+  Explore,
+  exploreAndMoreStoriesQuery,
+  exploreQuery,
   indexQuery,
   type Post,
   postAndMoreStoriesQuery,
@@ -52,8 +55,8 @@ export async function getAllPosts(client: SanityClient): Promise<Post[]> {
   return (await client.fetch(indexQuery)) || []
 }
 
-export async function getAllExplore(client : SanityClient): Promise<Post[]> {
-  return (await client.fetch(indexQuery)) || []
+export async function getAllExplore(client : SanityClient): Promise<Explore[]> {
+  return (await client.fetch(exploreQuery)) || []
 }
 
 export async function getAllPostsSlugs(): Promise<Pick<Post, 'slug'>[]> {
@@ -74,4 +77,10 @@ export async function getPostAndMoreStories(
   slug: string,
 ): Promise<{ post: Post; morePosts: Post[] }> {
   return await client.fetch(postAndMoreStoriesQuery, { slug })
+}
+export async function getExploreAndMoreStories(
+  client: SanityClient,
+  slug: string,
+): Promise<{ explore: Explore; moreExplore: Explore[] }> {
+  return await client.fetch(exploreAndMoreStoriesQuery, { slug })
 }

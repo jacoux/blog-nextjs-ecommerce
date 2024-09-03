@@ -5,9 +5,10 @@ import {
   getAllPostsSlugs,
   getClient,
   getPostAndMoreStories,
+  getExploreAndMoreStories,
   getSettings,
 } from 'lib/sanity.client'
-import { Post, Settings } from 'lib/sanity.queries'
+import { Explore, Post, Settings } from 'lib/sanity.queries'
 import { GetStaticProps } from 'next'
 import type { SharedPageProps } from 'pages/_app'
 
@@ -15,6 +16,8 @@ interface PageProps extends SharedPageProps {
   post: Post
   morePosts: Post[]
   settings?: Settings
+  moreExplore: Explore[]
+  explore: Explore
 }
 
 interface Query {
@@ -37,9 +40,10 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
   const { draftMode = false, params = {} } = ctx
   const client = getClient(draftMode ? { token: readToken } : undefined)
 
-  const [settings, { post, morePosts }] = await Promise.all([
+  const [settings, { post, morePosts }, {explore, moreExplore}] = await Promise.all([
     getSettings(client),
     getPostAndMoreStories(client, params.slug),
+    getExploreAndMoreStories(client, params.slug),
   ])
 
   if (!post) {
@@ -52,6 +56,8 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
     props: {
       post,
       morePosts,
+      explore,
+      moreExplore,
       settings,
       draftMode,
       token: draftMode ? readToken : '',

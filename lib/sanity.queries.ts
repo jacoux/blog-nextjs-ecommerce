@@ -44,6 +44,10 @@ export const indexQuery = groq`
 *[_type == "post"] | order(date desc, _updatedAt desc) {
   ${postFields}
 }`
+export const exploreQuery = groq`
+*[_type == "explore"] | order(date desc, _updatedAt desc) {
+  ${exploreFields}
+}`
 
 export const postAndMoreStoriesQuery = groq`
 {
@@ -110,9 +114,24 @@ export interface Post {
   location?: any
   datehour?:any
   whom?: any 
-
 }
-
+export interface Explore {
+  _id: string
+  title?: string
+  coverImage?: any
+  date?: string
+  category?: string
+  tags: string[]
+  _updatedAt?: string
+  excerpt?: string
+  author?: Author
+  slug?: string
+  content?: any
+  organiser?: any
+  location?: any
+  datehour?: any
+  whom?: any
+}
 export interface Settings {
   title?: string
   description?: any[]
