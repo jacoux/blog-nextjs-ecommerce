@@ -8,7 +8,9 @@ import {
 import {
   Explore,
   exploreAndMoreStoriesQuery,
+  exploreBySlugQuery,
   exploreQuery,
+  exploreSlugsQuery,
   indexQuery,
   type Post,
   postAndMoreStoriesQuery,
@@ -64,12 +66,23 @@ export async function getAllPostsSlugs(): Promise<Pick<Post, 'slug'>[]> {
   const slugs = (await client.fetch<string[]>(postSlugsQuery)) || []
   return slugs.map((slug) => ({ slug }))
 }
+export async function getAllExploreSlugs(): Promise<Pick<Explore, 'slug'>[]> {
+  const client = getClient()
+  const slugs = (await client.fetch<string[]>(exploreSlugsQuery)) || []
+  return slugs.map((slug) => ({ slug }))
+}
 
 export async function getPostBySlug(
   client: SanityClient,
   slug: string,
 ): Promise<Post> {
   return (await client.fetch(postBySlugQuery, { slug })) || ({} as any)
+}
+export async function getExploreBySlug(
+  client: SanityClient,
+  slug: string,
+): Promise<Explore> {
+  return (await client.fetch(exploreBySlugQuery, { slug })) || ({} as any)
 }
 
 export async function getPostAndMoreStories(

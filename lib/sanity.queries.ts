@@ -87,9 +87,18 @@ export const postSlugsQuery = groq`
 *[_type == "post" && defined(slug.current)][].slug.current
 `
 
+export const exploreSlugsQuery = groq`
+*[_type == "explore" && defined(slug.current)][].slug.current
+`
+
 export const postBySlugQuery = groq`
 *[_type == "post" && slug.current == $slug][0] {
   ${postFields}
+}
+`
+export const exploreBySlugQuery = groq`
+*[_type == "explore" && slug.current == $slug][0] {
+  ${exploreFields}
 }
 `
 
@@ -101,6 +110,7 @@ export interface Author {
 export interface Post {
   _id: string
   title?: string
+  prefix?: string
   coverImage?: any
   date?: string
   category?: string
@@ -119,6 +129,7 @@ export interface Explore {
   _id: string
   title?: string
   coverImage?: any
+  prefix?: string
   date?: string
   category?: string
   tags: string[]

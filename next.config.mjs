@@ -10,7 +10,7 @@ const config = {
     return [
       {
         source: '/verken-landen',
-        destination: '/posts',
+        destination: '/activiteiten',
       },
       {
         source: '/activiteiten',

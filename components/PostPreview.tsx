@@ -13,35 +13,10 @@ export default function PostPreview({
   tags,
   author,
   slug,
+  prefix
 }: Omit<Post, '_id'>) {
   return (
 
-      
-    //   <div className="mb-8 md:mb-16">
-    //           <a
-    //           href={`/posts/${slug}`}
-    //           className="flex flex-col gap-4 rounded-md px-4 py-8 md:p-0"
-    // ></a>
-        
-    //     <CoverImage slug={slug} title={title} image={coverImage} priority/>
-
-    //           <div className="flex flex-col items-start py-4">
-    //     <div className="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
-    //         <p className="text-sm font-semibold text-blue-600">
-    //           {category}
-    //         </p>
-    //             </div>
-    //             <p className="mb-4 text-xl font-bold md:text-2xl">
-    //               {excerpt}
-    //             </p>
-    //             <div className="flex flex-col items-start text-sm text-gray-500 lg:flex-row lg:items-center">
-    //                     {author && <Avatar name={author.name} picture={author.picture} />}
-
-    //               <p className="mx-2 hidden lg:block"><Date dateString={date} /></p>
-    //             </div>
-    //           </div>
-    //       </div>
-    
   <div className="w-full relative flex items-center justify-center h-auto">
       <div className="group bg-white shadow-lg shadow-gray-200 rounded-xl p-2.5 transition-all duration-500 w-full hover:shadow-gray-300">
         <div className="rounded-3xl ">
@@ -103,7 +78,7 @@ export default function PostPreview({
           </svg>
         </a>
       </div>
-      <a href={`/posts/${slug}`} className="rounded-lg py-2.5 px-6 text-center w-full text-white bg-indigo-600 font-semibold text-lg transition-all duration-500 hover:bg-indigo-700">Lees meer!</a>
+      <a href={`/${prefix}/${slug}`} className="rounded-lg py-2.5 px-6 text-center w-full text-white bg-indigo-600 font-semibold text-lg transition-all duration-500 hover:bg-indigo-700">Lees meer!</a>
       </div>
       </div>
       </div>

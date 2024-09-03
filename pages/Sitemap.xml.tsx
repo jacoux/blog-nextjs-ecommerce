@@ -1,4 +1,4 @@
-import { getAllPosts, getClient } from 'lib/sanity.client'
+import { getAllExplore, getAllPosts, getClient } from 'lib/sanity.client'
 
 type SitemapLocation = {
   url: string
@@ -60,7 +60,18 @@ export async function getServerSideProps({ res }) {
     .filter(({ slug = '' }) => slug)
     .map((post) => {
       return {
-        url: `/posts/${post.slug}`,
+        url: `/activiteiten/${post.slug}`,
+        priority: 0.5,
+        lastmod: new Date(post._updatedAt),
+      }
+    })
+  
+    const [explores = []] = await Promise.all([getAllExplore(client)])
+  const exploreUrls: SitemapLocation[] = explores
+    .filter(({ slug = '' }) => slug)
+    .map((post) => {
+      return {
+        url: `/explore/${post.slug}`,
         priority: 0.5,
         lastmod: new Date(post._updatedAt),
       }
@@ -69,7 +80,7 @@ export async function getServerSideProps({ res }) {
   // ... get more routes here
 
   // Return the default urls, combined with dynamic urls above
-  const locations = [...defaultUrls, ...postUrls]
+  const locations = [...defaultUrls, ...postUrls, ...exploreUrls]
 
   // Set response to XML
   res.setHeader('Content-Type', 'text/xml')

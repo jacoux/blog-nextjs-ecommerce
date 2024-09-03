@@ -25,6 +25,7 @@ export default function MoreExplore({ explores }: { explores: Explore[] }) {
             author={explore.author}
             slug={explore.slug}
             excerpt={explore.excerpt}
+            prefix='verken-landen'
           />
         ))}
       </div>
