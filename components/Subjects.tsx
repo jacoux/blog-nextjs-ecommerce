@@ -1,12 +1,12 @@
 export default function Subjects() {
-    return (
-          <section>
+  return (
+    <section>
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
-          {/* Title */}
-                 <h3 className="text-2xl font-bold md:text-3xl">Kijk eens rond</h3>
-            {/* Divider */}
-            <div className="my-6 w-16 border-t border-black"></div>
+        {/* Title */}
+        <h3 className="text-2xl font-bold md:text-3xl">Kijk eens rond</h3>
+        {/* Divider */}
+        <div className="my-6 w-16 border-t border-black"></div>
         <p className="msm:text-base mb-8 mt-4 text-sm text-gray-500 md:mb-12 lg:mb-16">
           Lorem ipsum dolor sit amet elit ut aliquam
         </p>
@@ -24,7 +24,9 @@ export default function Subjects() {
             />
             <div className="absolute bottom-5 left-5 flex flex-col justify-center rounded-lg bg-white px-8 py-4">
               <p className="text-sm font-medium sm:text-xl">Altijd te doen</p>
-              <p className="text-sm sm:text-base">Ontdek prachtige wandelingen, parken en belevenissen</p>
+              <p className="text-sm sm:text-base">
+                Ontdek prachtige wandelingen, parken en belevenissen
+              </p>
             </div>
           </a>
           {/* Item */}
@@ -48,10 +50,13 @@ export default function Subjects() {
             />
             <div className="absolute bottom-5 left-5 flex flex-col justify-center rounded-lg bg-white px-8 py-4">
               <p className="text-sm font-medium sm:text-xl">Koop lokaal</p>
-              <p className="text-sm sm:text-base">Ontdek hier onze handelaren</p>
+              <p className="text-sm sm:text-base">
+                Ontdek hier onze handelaren
+              </p>
             </div>
           </a>
         </div>
       </div>
     </section>
-)}
+  )
+}

@@ -57,7 +57,7 @@ export async function getAllPosts(client: SanityClient): Promise<Post[]> {
   return (await client.fetch(indexQuery)) || []
 }
 
-export async function getAllExplore(client : SanityClient): Promise<Explore[]> {
+export async function getAllExplore(client: SanityClient): Promise<Explore[]> {
   return (await client.fetch(exploreQuery)) || []
 }
 

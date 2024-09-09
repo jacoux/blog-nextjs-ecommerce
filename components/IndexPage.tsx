@@ -20,7 +20,7 @@ export interface IndexPageProps {
 
 export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings, explore } = props
-  const [ ...moreExplore] = explore || []
+  const [...moreExplore] = explore || []
   const { title = demo.title, description = demo.description } = settings || {}
 
   return (
@@ -30,7 +30,7 @@ export default function IndexPage(props: IndexPageProps) {
       <Layout preview={preview} loading={loading}>
         <Container>
           <BlogHeader title={title} description={description} level={1} />
-            <Subjects />
+          <Subjects />
           <MoreStories posts={posts} />
           {moreExplore.length > 0 && <MoreExplore explores={explore} />}
         </Container>

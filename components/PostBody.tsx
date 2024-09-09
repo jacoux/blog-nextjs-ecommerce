@@ -23,61 +23,75 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
   },
 }
 export default function PostBody(
-  props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug' | 'content' | 'whom' | 'datehour' | 'location'>,
+  props: Pick<
+    Post,
+    | 'title'
+    | 'coverImage'
+    | 'date'
+    | 'author'
+    | 'slug'
+    | 'content'
+    | 'whom'
+    | 'datehour'
+    | 'location'
+  >,
 ) {
-  const { title, coverImage, date, author, slug, content, whom, datehour, location } = props
+  const {
+    title,
+    coverImage,
+    date,
+    author,
+    slug,
+    content,
+    whom,
+    datehour,
+    location,
+  } = props
   return (
-<section>
+    <section>
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-12 md:px-10 md:py-16 lg:py-20">
         {/* Component */}
         <div className="flex flex-col gap-14 lg:gap-20">
           {/* Image */}
-              <CoverImage title={title} image={coverImage} priority slug={slug} />
+          <CoverImage title={title} image={coverImage} priority slug={slug} />
 
           {/* Content */}
           <div className="flex flex-col gap-14 lg:gap-20">
             <div className="flex flex-col md:flex-row gap-5">
-              <h2 className="text-3xl md:text-5xl font-bold flex-1">
-                Wat
-              </h2>
+              <h2 className="text-3xl md:text-5xl font-bold flex-1">Wat</h2>
               <div className="flex-1">
-                     <PortableText value={content} components={myPortableTextComponents} />
-
+                <PortableText
+                  value={content}
+                  components={myPortableTextComponents}
+                />
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
               <h2 className="text-3xl md:text-5xl font-semibold flex-1">
                 Wanneer
               </h2>
-              <p className="flex-1">
-                {datehour}
-              </p>
+              <p className="flex-1">{datehour}</p>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
               <h2 className="text-3xl md:text-5xl font-bold flex-1">
                 Voor wie
               </h2>
-              <p className="flex-1">
-                {whom}
-              </p>
+              <p className="flex-1">{whom}</p>
             </div>
             <div className="flex flex-col md:flex-row gap-5">
               <h2 className="text-3xl md:text-5xl font-bold flex-1">
                 Organisator
               </h2>
               <div className="flex-1">
-                        {author && <Avatar name={author.name} picture={author.picture}></Avatar>}
-
+                {author && (
+                  <Avatar name={author.name} picture={author.picture}></Avatar>
+                )}
               </div>
             </div>
-                        <div className="flex flex-col md:flex-row gap-5">
-              <h2 className="text-3xl md:text-5xl font-bold flex-1">
-                Waar
-              </h2>
-              <p className="flex-1">
-                {location}
-              </p>
+            <div className="flex flex-col md:flex-row gap-5">
+              <h2 className="text-3xl md:text-5xl font-bold flex-1">Waar</h2>
+              <p className="flex-1">{location}</p>
             </div>
           </div>
         </div>

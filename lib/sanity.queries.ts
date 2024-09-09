@@ -122,8 +122,8 @@ export interface Post {
   content?: any
   organiser?: any
   location?: any
-  datehour?:any
-  whom?: any 
+  datehour?: any
+  whom?: any
 }
 export interface Explore {
   _id: string

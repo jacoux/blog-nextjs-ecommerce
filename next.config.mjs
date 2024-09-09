@@ -11,7 +11,7 @@ const config = {
       {
         source: '/activiteiten',
         destination: '/activities',
-      }
+      },
     ]
   },
   typescript: {

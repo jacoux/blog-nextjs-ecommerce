@@ -65,8 +65,8 @@ export async function getServerSideProps({ res }) {
         lastmod: new Date(post._updatedAt),
       }
     })
-  
-    const [explores = []] = await Promise.all([getAllExplore(client)])
+
+  const [explores = []] = await Promise.all([getAllExplore(client)])
   const exploreUrls: SitemapLocation[] = explores
     .filter(({ slug = '' }) => slug)
     .map((post) => {

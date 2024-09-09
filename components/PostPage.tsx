@@ -49,17 +49,16 @@ export default function PostPage(props: PostPageProps) {
                   date={post.date}
                   author={post.author}
                 />  */}
-                  <PostBody
-                     title={post.title}
+                <PostBody
+                  title={post.title}
                   coverImage={post.coverImage}
                   date={post.date}
                   author={post.author}
-                    content={post.content} 
-                    whom={post.whom} 
-                    location={post.location}
-                    datehour={post.datehour}
-
-                    />
+                  content={post.content}
+                  whom={post.whom}
+                  location={post.location}
+                  datehour={post.datehour}
+                />
               </article>
               <SectionSeparator />
               {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
