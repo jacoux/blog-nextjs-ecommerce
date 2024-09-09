@@ -156,6 +156,8 @@ async function queryStaleRoutes(
       return await queryStaleAuthorRoutes(client, body._id)
     case 'post':
       return await queryStalePostRoutes(client, body._id)
+    case 'exlore':
+      return await queryStaleExploreRoutes(client, body._id)
     case 'settings':
       return await queryAllRoutes(client)
     default:
@@ -219,4 +221,17 @@ async function queryStalePostRoutes(
   slugs = await mergeWithMoreStories(client, slugs)
 
   return ['/', ...slugs.map((slug) => `/activiteiten/${slug}`)]
+}
+async function queryStaleExploreRoutes(
+  client: SanityClient,
+  id: string,
+): Promise<StaleRoute[]> {
+  let slugs = await client.fetch(
+    groq`*[_type == "explore" && _id == $id].slug.current`,
+    { id },
+  )
+
+  slugs = await mergeWithMoreStories(client, slugs)
+
+  return ['/', ...slugs.map((slug) => `/verken/${slug}`)]
 }

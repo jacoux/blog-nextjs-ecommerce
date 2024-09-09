@@ -36,7 +36,7 @@ export default function App({
                   <a href="/activiteiten">Activiteiten</a>
                 </li>
                 <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                  <a href="/verken-landen">Verken Landen</a>
+                  <a href="/verken">Verken Landen</a>
                 </li>
                 <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
                   <a href="">Koop lokaal</a>

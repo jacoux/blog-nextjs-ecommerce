@@ -26,7 +26,7 @@ const iframeOptions = {
             : new Error('Missing slug')
         case 'explore':
           return (document as any)?.slug?.current
-            ? `/verken-landen/${(document as any).slug.current}`
+            ? `/verken/${(document as any).slug.current}`
             : new Error('Missing slug')
         default:
           return new Error(`Unknown document type: ${document?._type}`)

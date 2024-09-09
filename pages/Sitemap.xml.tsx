@@ -71,7 +71,7 @@ export async function getServerSideProps({ res }) {
     .filter(({ slug = '' }) => slug)
     .map((post) => {
       return {
-        url: `/explore/${post.slug}`,
+        url: `/verken/${post.slug}`,
         priority: 0.5,
         lastmod: new Date(post._updatedAt),
       }

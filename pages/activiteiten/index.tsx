@@ -1,6 +1,10 @@
+import { readToken } from "lib/sanity.api";
+import { getClient, getSettings, getExploreAndMoreStories, getAllExploreSlugs } from "lib/sanity.client";
+import { GetStaticProps } from "next";
 import { useState } from "react";
-
-export default function ExplorePage() {
+import PostPreview from 'components/PostPreview'
+import type { Post } from 'lib/sanity.queries'
+export default function ActivityPage({ posts }: { posts: Post[] }) {
     const [activeButton, setActiveButton] = useState("Product Updates");
 
     const handleButtonClick = (button) => {
@@ -22,7 +26,7 @@ export default function ExplorePage() {
                        Activiteiten in Landen
                     </h2>
                     <p className="text-gray-500 mt-2">
-                       Doorzoek hier onze leuke tijdloze activiteiten
+                       Doorzoek hier onze leuke tijdloze 
                     </p>
                     {/* Buttons */}
                     <div className="my-10 md:my-20 flex flex-col md:flex-row justify-center gap-3">
@@ -307,4 +311,6 @@ export default function ExplorePage() {
             </div>
         </section>
     );
+
+  
 }

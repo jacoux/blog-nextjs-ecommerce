@@ -9,10 +9,6 @@ const config = {
   async rewrites() {
     return [
       {
-        source: '/verken-landen',
-        destination: '/activiteiten',
-      },
-      {
         source: '/activiteiten',
         destination: '/activities',
       }

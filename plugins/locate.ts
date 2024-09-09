@@ -44,6 +44,38 @@ export const locate: DocumentLocationResolver = (params, context) => {
       }),
     )
   }
+  if (params.type === 'explore') {
+    // Listen to the query and fetch the draft and published document
+    const doc$ = context.documentStore.listenQuery(
+      `*[_id == $id && defined(slug.current)][0]{slug,title}`,
+      params,
+      { perspective: 'previewDrafts' },
+    ) as Observable<{
+      slug: { current: string }
+      title: string | null
+    } | null>
+
+    return doc$.pipe(
+      map((doc) => {
+        return {
+          locations: [
+            {
+              title: doc.title || 'Untitled',
+              href: `/verken/${doc.slug.current}`,
+            },
+            {
+              title: 'Home',
+              href: `/`,
+            },
+            {
+              title: doc.title || 'Untitled',
+              href: `/verken`,
+            },
+          ],
+        }
+      }),
+    )
+  }
 
   if (params.type === 'author') {
     // Fetch all posts that reference the viewed author, if the post has a slug defined
