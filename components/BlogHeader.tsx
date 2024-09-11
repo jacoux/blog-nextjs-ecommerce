@@ -75,7 +75,7 @@ export default function BlogHeader({
               </div>
               {/* Image */}
               <img
-                src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+                src="https://www.landen.be/imageresizer/397A4DB8E78E99DC59976B2550485E43/2059.JPG?h=800"
                 alt=""
                 className="relative bottom-0 right-0 mt-12 w-[480px] object-cover lg:absolute lg:mt-0 lg:h-[370px]"
               />

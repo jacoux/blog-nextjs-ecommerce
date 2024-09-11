@@ -18,7 +18,7 @@ export default function Subjects() {
             className="relative flex h-[300px] items-end [grid-area:1/1/3/2] md:h-auto"
           >
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+              src="https://plus.unsplash.com/premium_photo-1668197023038-04f17cdf82a0?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               className="inline-block h-full w-full rounded-lg object-cover"
             />
@@ -32,7 +32,7 @@ export default function Subjects() {
           {/* Item */}
           <a href="#" className="relative flex h-[300px] items-end">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+              src="https://plus.unsplash.com/premium_photo-1677151140485-df90e1e2fbbd?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               className="inline-block h-full w-full rounded-lg object-cover"
             />
@@ -44,7 +44,7 @@ export default function Subjects() {
           {/* Item */}
           <a href="#" className="relative flex h-[300px] items-end">
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
+              src="https://images.vrt.be/w1280hx/2023/04/26/bbd53a00-e460-11ed-91d7-02b7b76bf47f.jpg"
               alt=""
               className="inline-block h-full w-full rounded-lg object-cover"
             />

@@ -64,7 +64,7 @@ export default function ExplorePage(props: PageProps) {
                 handleButtonClick('Wandelen')
               }}
             >
-              🚴 Wandelen
+              🚶 Wandelen
             </button>
             <button
               className={buttonClass('Fietsen')}
@@ -124,74 +124,7 @@ export default function ExplorePage(props: PageProps) {
           {/* <p className="text-gray-500 mt-2">
                         De leukste parken in Landen
                     </p> */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Blog Item */}
-            <div className="bg-gray-50 rounded-lg overflow-hidden">
-              <div className="relative h-72">
-                <img
-                  className="h-72 w-full object-cover"
-                  src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
-                  alt=""
-                />
-                <span className="absolute bottom-5 right-5 bg-gray-400 text-sm font-semibold px-2.5 py-2 rounded">
-                  Product Updates
-                </span>
-              </div>
-              <div className="p-4">
-                <h2 className="text-lg font-semibold mt-2">
-                  Here is the title for this News
-                </h2>
-                <p className="text-gray-500">
-                  We make every expression of Hero Spirits with precision and
-                  passion
-                </p>
-              </div>
-            </div>
-            {/* Blog Item */}
-            <div className=" bg-gray-50 rounded-lg overflow-hidden">
-              <div className="relative h-72">
-                <img
-                  className="h-72 w-full object-cover"
-                  src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
-                  alt=""
-                />
-                <span className="absolute bottom-5 right-5 bg-gray-400 text-sm font-semibold px-2.5 py-2 rounded">
-                  Product Updates
-                </span>
-              </div>
-              <div className="p-4">
-                <h2 className="text-lg font-semibold mt-2">
-                  Here is the title for this News
-                </h2>
-                <p className="text-gray-500">
-                  We make every expression of Hero Spirits with precision and
-                  passion
-                </p>
-              </div>
-            </div>
-            {/* Blog Item */}
-            <div className="bg-gray-50 rounded-lg overflow-hidden">
-              <div className="relative h-72">
-                <img
-                  className="h-72 w-full object-cover"
-                  src="https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074"
-                  alt=""
-                />
-                <span className="absolute bottom-5 right-5 bg-gray-400 text-sm font-semibold px-2.5 py-2 rounded">
-                  Product Updates
-                </span>
-              </div>
-              <div className="p-4">
-                <h2 className="text-lg font-semibold mt-2">
-                  Here is the title for this News
-                </h2>
-                <p className="text-gray-500">
-                  We make every expression of Hero Spirits with precision and
-                  passion
-                </p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
