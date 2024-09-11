@@ -117,14 +117,6 @@ export default function ExplorePage(props: PageProps) {
             ))}
           </div>
 
-          {/* Button */}
-          {/* <h2 className="mb-4 mt-6 text-3xl font-bold md:text-5xl">
-                        Parken
-                    </h2> */}
-          {/* <p className="text-gray-500 mt-2">
-                        De leukste parken in Landen
-                    </p> */}
-
         </div>
       </div>
     </section>
