@@ -4,6 +4,7 @@ import { VisualEditing } from '@sanity/visual-editing/next-pages-router'
 import { AppProps } from 'next/app'
 import dynamic from 'next/dynamic'
 import '.././styles.css'
+import BottomNavbar from 'components/BottomNavbar'
 
 export interface SharedPageProps {
   draftMode: boolean
@@ -25,7 +26,7 @@ export default function App({
         </PreviewProvider>
       ) : (
         <>
-          <header className="header sticky z-50	 top-0 bg-white shadow-md flex items-center justify-between px-8 py-02">
+          <header className="header sticky z-50	 top-0 bg-white shadow-md flex items-center justify-between px-8 py-02 hidden xl:flex sm:hidden ">
             <h1 className="w-3/12">
               <a href="/">In Landen</a>
             </h1>
@@ -38,7 +39,7 @@ export default function App({
                   <a href="/verken">Verken Landen</a>
                 </li>
                 <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                  <a href="">Koop lokaal</a>
+                  <a href="/shop">Koop lokaal</a>
                 </li>
                 <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
                   <a href="">Contact</a>
@@ -85,7 +86,8 @@ export default function App({
               </a>
             </div>
           </header>
-          <Component {...pageProps} />
+            <Component {...pageProps} />
+            <BottomNavbar></BottomNavbar>
         </>
       )}
       {draftMode && <VisualEditing />}

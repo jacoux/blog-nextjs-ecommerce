@@ -8,7 +8,6 @@
     "lint": "next lint . --ignore-path .gitignore",
     "lint:fix": "npm run format && npm run lint -- --fix",
     "start": "next start",
-    
     "type-check": "tsc --noEmit"
   },
   "prettier": {
@@ -26,6 +25,7 @@
     "classnames": "2.5.1",
     "date-fns": "3.6.0",
     "intl-segmenter-polyfill": "0.4.4",
+    "lucide-react": "^0.441.0",
     "next": "14.2.4",
     "next-sanity": "9.3.10",
     "next-sanity-image": "6.1.1",
