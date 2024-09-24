@@ -1,5 +1,24 @@
 import { groq } from 'next-sanity'
-
+export const productFields = groq`
+  _id,
+  name,
+  "images": images[]{
+    _key,
+    "url": asset->url,
+    alt
+  },
+  description,
+  "slug": slug.current,
+  price,
+  category->{
+    _id,
+    title
+  },
+  company->{
+    _id,
+    title
+  }
+`
 const postFields = groq`
   _id,
   title,
@@ -48,6 +67,10 @@ export const exploreQuery = groq`
 *[_type == "explore"] | order(date desc, _updatedAt desc) {
   ${exploreFields}
 }`
+export const productQuery = groq`
+*[_type == "product"]| order(date desc, _updatedAt desc) {
+  ${productFields}
+}`
 
 export const postAndMoreStoriesQuery = groq`
 {
@@ -90,6 +113,9 @@ export const postSlugsQuery = groq`
 export const exploreSlugsQuery = groq`
 *[_type == "explore" && defined(slug.current)][].slug.current
 `
+export const productSlugsQuery = groq`
+*[_type == "product" && defined(slug.current)][].slug.current
+`
 
 export const postBySlugQuery = groq`
 *[_type == "post" && slug.current == $slug][0] {
@@ -101,10 +127,38 @@ export const exploreBySlugQuery = groq`
   ${exploreFields}
 }
 `
+export const productBySlugQuery = groq`
+*[_type == "product" && slug.current == $slug][0] {
+  ${productFields}
+}
+`
 
 export interface Author {
   name?: string
   picture?: any
+}
+
+export interface Product {
+  _id: string
+  name: string
+  images: Array<{
+    _key: string
+    asset: {
+      _ref: string
+    }
+    alt: string
+  }>
+  description: string
+  slug: {
+    current: string
+  }
+  price: number
+  category?: {
+    _ref: string
+  }
+  company?: {
+    _ref: string
+  }
 }
 
 export interface Post {

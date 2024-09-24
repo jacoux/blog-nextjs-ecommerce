@@ -23,6 +23,9 @@ import postType from 'schemas/post'
 import newsType from 'schemas/news'
 import exploreType from 'schemas/explore'
 import settingsType from 'schemas/settings'
+import categoryType from 'schemas/category'
+import productType from 'schemas/product'
+import companyType from 'schemas/company'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'In landen'
 
@@ -33,7 +36,16 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [authorType, postType, newsType, exploreType, settingsType],
+    types: [
+      authorType,
+      postType,
+      newsType,
+      exploreType,
+      settingsType,
+      categoryType,
+      companyType,
+      productType,
+    ],
   },
   plugins: [
     structureTool({
