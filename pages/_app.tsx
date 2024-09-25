@@ -44,14 +44,14 @@ export default function App({
                 <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
                   <a href="/shop">Zoek dienst</a>
                 </li>
-                <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                {/* <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
                   <a href="">Contact</a>
-                </li>
+                </li> */}
               </ul>
             </nav>
 
             <div className="w-3/12 flex justify-end">
-              <a href="">
+              {/* <a href="">
                 <svg
                   className="h-8 p-1 hover:text-green-500 duration-200"
                   aria-hidden="true"
@@ -86,7 +86,7 @@ export default function App({
                     className=""
                   ></path>
                 </svg>
-              </a>
+              </a> */}
             </div>
           </header>
             <Component {...pageProps} />

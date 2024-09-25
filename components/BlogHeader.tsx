@@ -29,7 +29,7 @@ export default function BlogHeader({
                 {title}
               </h1>
               {/* Buttons */}
-              <div className="flex items-stretch">
+              {/* <div className="flex items-stretch">
                 <a
                   href="#"
                   className="mr-6 rounded-md bg-black px-8 py-4 text-center font-semibold text-white lg:mr-8"
@@ -47,7 +47,7 @@ export default function BlogHeader({
                   />
                   <p>Download App</p>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* Hero bottom */}

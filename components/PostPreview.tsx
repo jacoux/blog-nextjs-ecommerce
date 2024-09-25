@@ -49,7 +49,7 @@ export default function PostPreview({
           <p className="text-base font-medium text-gray-500 mb-4 text-left">
             {excerpt}
           </p>
-          <div className="flex items-center justify-start w-full gap-4 mb-4">
+          {/* <div className="flex items-center justify-start w-full gap-4 mb-4">
             <a
               href="#"
               className="w-10 aspect-square rounded-full bg-gray-50 border-gray-600 border flex items-center justify-center transition-all duration-500 hover:bg-gray-100 hover:border-gray-900"
@@ -170,7 +170,7 @@ export default function PostPreview({
                 ></path>
               </svg>
             </a>
-          </div>
+          </div> */}
           <a
             href={`/${prefix}/${slug}`}
             className="rounded-lg py-2.5 px-6 text-center w-full text-white bg-indigo-600 font-semibold text-lg transition-all duration-500 hover:bg-indigo-700"

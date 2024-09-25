@@ -6,7 +6,7 @@ const BottomNavbar = () => {
     { icon: Compass, label: 'Verken', link: '/verken' },
     { icon: Activity, label: 'Activiteiten', link: '/activiteiten' },
     { icon: ShoppingBag, label: 'Shop', link: '/shop' },
-    { icon: MessageCircle, label: 'Contact', link: '/contact' },
+    // { icon: MessageCircle, label: 'Contact', link: '/contact' },
   ];
 
   return (
