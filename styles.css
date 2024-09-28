@@ -9,6 +9,11 @@
     url(https://www.toerismevlaamsbrabant.be/Images/tumuliroute-header_tcm251-140186.png);
   background-size: cover;
 }
+@media only screen and (max-width: 600px) {
+.bg-big {
+    padding: 50px;
+}
+}
 
 h1 {
   font-family: 'Poppins', sans-serif;
