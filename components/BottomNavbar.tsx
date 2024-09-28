@@ -10,7 +10,7 @@ const BottomNavbar = () => {
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2 hidden sm:block d-block">
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2  d-block xl:hidden">
       <ul className="flex justify-between items-center">
         {navItems.map(({ icon: Icon, label, link }) => (
           <a key={label} href={link} className="flex flex-col items-center">
