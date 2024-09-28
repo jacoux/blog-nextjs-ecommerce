@@ -32,18 +32,18 @@ export default function App({
             </h1>
             <nav className="nav font-semibold text-lg">
               <ul className="flex items-center">
-                <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer active">
-                  <a href="/activiteiten">Activiteiten</a>
-                </li>
-                <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                  <a href="/verken">Verken Landen</a>
-                </li>
-                <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                  <a href="/shop">Koop lokaal</a>
-                </li>
-                <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
-                  <a href="/shop">Zoek dienst</a>
-                </li>
+                <a href="/activiteiten" className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer active">
+                  Activiteiten
+                </a>
+                <a href="/verken" className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                  Verken Landen
+                </a>
+                <a href="/shop" className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                Koop lokaal
+                </a>
+                <a href="/shop" className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
+                 Zoek dienst
+                </a>
                 {/* <li className="p-4 border-b-2 border-green-500 border-opacity-0 hover:border-opacity-100 hover:text-green-500 duration-200 cursor-pointer">
                   <a href="">Contact</a>
                 </li> */}
