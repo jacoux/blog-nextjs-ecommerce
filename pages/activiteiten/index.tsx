@@ -44,10 +44,10 @@ export default function ActivityPage(props: PageProps) {
         <div className="text-center mb-12">
           {/* Title */}
           <h2 className="mb-4 mt-6 text-3xl font-bold md:text-5xl">
-            Verken Landen
+            Aankomende activiteiten
           </h2>
           <p className="text-gray-500 mt-2">
-            Doorzoek hier onze leuke tijdloze activiteiten
+            Bekijk wat er de komende dagen te doen is in Landen
           </p>
           {/* Buttons */}
           <div className="my-10 md:my-20 flex flex-col md:flex-row justify-center gap-3">
