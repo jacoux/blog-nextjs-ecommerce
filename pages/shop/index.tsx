@@ -17,7 +17,7 @@ export default function ShopPage() {
             <h1 className="mb-4 text-4xl font-bold md:text-6xl">Komt eraan!</h1>
             <p className="mb-6 max-w-lg text-sm text-gray-500 sm:text-xl md:mb-10 lg:mb-12">
               We zijn volop bezig met samenwerkingen op te zetten met onze partners. Wil je ook partner worden en je producten of diensten op InLanden promoten?
-              Neem dan contact op via onderstaande knop.
+              Neem dan contact op via onderstaande knop of stuur een mailtje naar jacobsniels10@gmail.com.
             </p>
             <a
               href="mailto:info@jacouxit.be"
