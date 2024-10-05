@@ -7,9 +7,7 @@ export default function Subjects() {
         <h3 className="text-2xl font-bold md:text-3xl">Kijk eens rond</h3>
         {/* Divider */}
         <div className="my-6 w-16 border-t border-black"></div>
-        <p className="msm:text-base mb-8 mt-4 text-sm text-gray-500 md:mb-12 lg:mb-16">
-          Lorem ipsum dolor sit amet elit ut aliquam
-        </p>
+
         {/* Content */}
         <div className="mx-auto grid justify-items-stretch gap-4 md:grid-cols-2 lg:gap-10">
           {/* Item */}
