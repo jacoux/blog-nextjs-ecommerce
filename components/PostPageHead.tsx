@@ -13,6 +13,14 @@ export default function PostPageHead({ settings, post }: PostPageHeadProps) {
   const title = settings.title ?? demo.title
   return (
     <Head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WRD5HTHJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R3WRD5HTHJ');
+</script>
       <title>{post.title ? `${post.title} | ${title}` : title}</title>
       <BlogMeta />
       {post.coverImage?.asset?._ref && (

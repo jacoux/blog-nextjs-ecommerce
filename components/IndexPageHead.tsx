@@ -18,6 +18,14 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
 
   return (
     <Head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WRD5HTHJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R3WRD5HTHJ');
+</script>
       <title>{title}</title>
       <BlogMeta />
       <meta
