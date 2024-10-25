@@ -3,12 +3,21 @@ import * as demo from 'lib/demo.data'
 import { Settings } from 'lib/sanity.queries'
 import Head from 'next/head'
 import { toPlainText } from 'next-sanity'
+import { Helmet } from 'react-helmet';
+import { useEffect } from 'react'
+
 
 export interface IndexPageHeadProps {
   settings: Settings
 }
 
 export default function IndexPageHead({ settings }: IndexPageHeadProps) {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-R3WRD5HTHJ');
+  }, []);
   const {
     title = demo.title,
     description = demo.description,
@@ -18,14 +27,17 @@ export default function IndexPageHead({ settings }: IndexPageHeadProps) {
 
   return (
     <Head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WRD5HTHJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R3WRD5HTHJ');
-</script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-R3WRD5HTHJ"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-R3WRD5HTHJ');
+            `,
+          }}
+        />
       <title>{title}</title>
       <BlogMeta />
       <meta
